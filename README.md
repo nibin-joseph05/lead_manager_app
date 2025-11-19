@@ -1,27 +1,42 @@
-# Mini Lead Manager CRM
+Mini Lead Manager CRM
+A lightweight CRM-style lead tracking app built with Flutter, using SQLite for persistence and Provider for state management. Manage leads with creation, search, filtering, editing, status updates, and quick JSON export, all wrapped in a clean Material 3 interface.
 
-Flutter CRM-style lead tracker backed by SQLite and powered by Provider state management. Create, search, filter, update, and export leads with a polished Material 3 UI and smooth transitions.
+Features
 
-## Features
-- Persistent SQLite storage with sqflite
-- Provider-based global state for CRUD, filtering, and search
-- Lead list with search bar, status chips, animated tiles, and pull-to-refresh
-- Add, edit, delete, and detail screens with status progression (New → Contacted → Converted/Lost)
-- Status badges, theme-aware design, and smooth page transitions
-- Clipboard JSON export of all leads for quick sharing/backups
-- Light and dark Material 3 themes with system detection
+Persistent SQLite storage using sqflite
 
-## Tech Stack
-- Flutter 3.8+
-- Provider
-- sqflite + path_provider + path
+Provider-based global state handling for CRUD, filtering, and search
 
-## Project Structure
-```
+Lead list with search bar, status chips, animated tiles, and pull-to-refresh
+
+Add, edit, delete, and detail screens with status progression (New → Contacted → Converted/Lost)
+
+Status badges, theme-aware Material 3 UI, and smooth page transitions
+
+Clipboard JSON export for quick sharing or backups
+
+Light and dark theme with system detection
+
+Tech Stack
+
+Flutter 3.8+
+
+Provider
+
+sqflite
+
+path_provider
+
+path
+
+Project Structure
 lib/
-├── db/db_service.dart          # SQLite setup and queries
-├── models/lead.dart            # Lead entity and status helpers
-├── providers/lead_provider.dart# Business logic, filters, export
+├── db/
+│   └── db_service.dart
+├── models/
+│   └── lead.dart
+├── providers/
+│   └── lead_provider.dart
 ├── screens/
 │   ├── home/lead_list_screen.dart
 │   ├── add/add_lead_screen.dart
@@ -30,21 +45,23 @@ lib/
 ├── widgets/
 │   ├── lead_tile.dart
 │   └── status_badge.dart
-└── main.dart                   # App bootstrap and theming
-```
+└── main.dart
 
-## Getting Started
-```bash
+Getting Started
 flutter pub get
 flutter run
-```
 
-## Testing
-```bash
+APK
+
+You can download the built APK from:
+(Add your Google Drive / GitHub Release link here)
+
+Testing
 flutter analyze
 flutter test
-```
 
-## Notes
-- Requires iOS/Android/emulator with SQLite support (default Flutter targets)
-- Clipboard export copies all stored leads as JSON
+Notes
+
+Works on Android, iOS, and emulators with SQLite enabled
+
+Clipboard export copies all stored leads as JSON
